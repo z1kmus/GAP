@@ -8,7 +8,7 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=200, null=True)
     last_name = models.CharField(max_length=200, null=True)
     bio = models.TextField(null=True, blank=True)
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     avatar = models.ImageField(null=True, default='avatar.svg')
 
     # USERNAME_FIELD = 'email'
